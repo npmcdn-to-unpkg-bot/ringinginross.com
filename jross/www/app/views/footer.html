@@ -1,0 +1,29 @@
+  <section id="footer">
+    <!-- <ul class="icons">
+      <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+      <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+      <li><a href="#" class="icon fa-google-plus"><span class="label">Google+</span></a></li>
+      <li><a href="#" class="icon fa-pinterest"><span class="label">Pinterest</span></a></li>
+      <li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
+      <li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+    </ul> -->
+    <div class="copyright">
+      <ul class="menu">
+        <li>&copy; joshualross.us. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Scripts -->
+  <script src="/public/js/jquery.min.js"></script>
+  <script src="/public/js/jquery.scrolly.min.js"></script>
+  <script src="/public/js/jquery.poptrox.min.js"></script>
+  <script src="/public/js/skel.min.js"></script>
+  <script src="/public/js/util.js"></script>
+  <!--[if lte IE 8]><script src="/public/js/ie/respond.min.js"></script><![endif]-->
+  <script src="/public/js/main.js"></script>
+  {{if eq .RunMode "dev"}}
+    {{template "debug.html" .}}
+  {{end}}
+	</body>
+</html>

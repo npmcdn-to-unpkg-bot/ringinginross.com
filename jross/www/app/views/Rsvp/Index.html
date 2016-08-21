@@ -1,0 +1,30 @@
+{{set . "title" "Ringing In Ross"}}
+{{template "header.html" .}}
+
+    <article id="rsvp" class="container box style3">
+        <header>
+            <h2>RSVP</h2>
+            <p>
+                <!--Check back soon to RSVP!<br/>-->
+                Please RSVP by Thanksgiving Day, Thursday November 24, 2016.<br />
+                <!--We look forward to celebrating with you!<br/>-->
+
+                <!--Please fill out the form below to RSVP.-->
+            </p>
+        </header>
+        <form method="post" action="/rsvp">
+            <div class="row 50%">
+                <div class="6u 12u$(mobile)"><input type="text" class="text" name="first_name" placeholder="First Name" /></div>
+                <div class="6u$ 12u$(mobile)"><input type="text" class="text" name="last_name" placeholder="Last Name" /></div>
+                <div class="12u$">
+                    <textarea name="message" placeholder="Message"></textarea>
+                </div>
+                <div class="12u$">
+                    <ul class="actions">
+                        <li><input type="submit" value="Next" /></li>
+                    </ul>
+                </div>
+            </div>
+        </form>
+    </article>
+{{template "footer.html" .}}

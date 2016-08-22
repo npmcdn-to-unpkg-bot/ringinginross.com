@@ -9,19 +9,27 @@
     </ul> -->
     <div class="copyright">
       <ul class="menu">
-        <li>&copy; joshualross.us. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+        <li>&copy; <a href="//joshualross.us">joshualross.us</a>. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
       </ul>
     </div>
   </section>
 
   <!-- Scripts -->
-  <script src="/public/js/jquery.min.js"></script>
   <script src="/public/js/jquery.scrolly.min.js"></script>
-  <script src="/public/js/jquery.poptrox.min.js"></script>
-  <script src="/public/js/skel.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.poptrox/2.5.1/jquery.poptrox.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
   <script src="/public/js/util.js"></script>
   <!--[if lte IE 8]><script src="/public/js/ie/respond.min.js"></script><![endif]-->
   <script src="/public/js/main.js"></script>
+  {{range .scripts}}
+      <script src="{{.}}"></script>
+    {{end}}
+  {{range .moreScripts}}
+    <script src="{{.}}"></script>
+  {{end}}
+  {{range .moreReactScripts}}
+    <script type="text/babel" src="{{.}}"></script>
+  {{end}}
   {{if eq .RunMode "dev"}}
     {{template "debug.html" .}}
   {{end}}
